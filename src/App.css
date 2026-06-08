@@ -147,14 +147,14 @@ body {
   font-family: var(--font-display);
   font-size: clamp(2rem, 6vw, 3rem);
   color: #fff;
-  background: #2979ff;
+  background: var(--coral);
   border: none;
   border-radius: 60px;
   padding: 1rem 3.5rem;
   cursor: pointer;
   position: relative;
   z-index: 1;
-  box-shadow: 0 8px 0 #1a56cc, 0 12px 24px rgba(41, 121, 255, 0.4);
+  box-shadow: 0 8px 0 var(--coral-dark), 0 12px 24px rgba(255, 107, 107, 0.4);
   transition: transform 0.1s, box-shadow 0.1s;
   animation: start-btn-bounce 3s ease-in-out infinite 1s;
   letter-spacing: 3px;
@@ -163,7 +163,7 @@ body {
 
 .start-btn:active {
   transform: translateY(4px);
-  box-shadow: 0 4px 0 #1a56cc, 0 6px 12px rgba(41, 121, 255, 0.3);
+  box-shadow: 0 4px 0 var(--coral-dark), 0 6px 12px rgba(255, 107, 107, 0.3);
 }
 
 @keyframes start-btn-bounce {
