@@ -147,23 +147,30 @@ body {
   font-family: var(--font-display);
   font-size: clamp(2rem, 6vw, 3rem);
   color: #fff;
-  background: var(--coral);
+  background: linear-gradient(90deg, #FF6B6B, #FF9F43, #FFD700, #4ECDC4, #A78BFA, #FF9FF3, #FF6B6B);
+  background-size: 200% 100%;
   border: none;
   border-radius: 60px;
   padding: 1rem 3.5rem;
   cursor: pointer;
   position: relative;
   z-index: 1;
-  box-shadow: 0 8px 0 var(--coral-dark), 0 12px 24px rgba(255, 107, 107, 0.4);
+  box-shadow: 0 8px 0 rgba(0,0,0,0.2), 0 12px 24px rgba(0,0,0,0.2);
   transition: transform 0.1s, box-shadow 0.1s;
-  animation: start-btn-bounce 3s ease-in-out infinite 1s;
+  animation: start-btn-bounce 3s ease-in-out infinite 1s, rainbow-shift 3s linear infinite;
   letter-spacing: 3px;
   touch-action: manipulation;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+@keyframes rainbow-shift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
 }
 
 .start-btn:active {
   transform: translateY(4px);
-  box-shadow: 0 4px 0 var(--coral-dark), 0 6px 12px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 4px 0 rgba(0,0,0,0.2), 0 6px 12px rgba(0,0,0,0.15);
 }
 
 @keyframes start-btn-bounce {
